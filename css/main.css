@@ -40,12 +40,19 @@ body {
     padding: 20px;
   }
   
-  h1, h2, h3 {
-    color: #666;
+    h3 {
+    color: #ece3e3;
+  } 
+  h2 {
+    color: #0f0e0e;
+  } 
+
+  h1  {
+    color: #fafafa;
   }
   
   p {
-    color: #666;
+    color: #fffefe;
   }
   
   footer {

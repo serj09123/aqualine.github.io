@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Аквалайн - Новости</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  /* Ваш общий стиль */
+
+  /* Стили для страницы новостей */
+  #news {
+    padding: 50px;
+    text-align: center;
+  }
+
+  .news-item {
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .news-item .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .news-item .date {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  .news-item .content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    color: #00a2ff;
+  }
+
+  #services {
+    padding: 50px;
+    text-align: center;
+  }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  nav ul li:hover .submenu {
+    display: block;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  @media only screen and (max-width: 768px) {
+      #news {
+        padding: 30px;
+      }
+
+      .news-item {
+        padding: 15px;
+      }
+
+      .news-item .title {
+        font-size: 22px;
+      }
+
+      .news-item .date {
+        font-size: 13px;
+      }
+
+      .news-item .content {
+        font-size: 15px;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      #news {
+        padding: 20px;
+      }
+
+      .news-item {
+        padding: 10px;
+      }
+
+      .news-item .title {
+        font-size: 20px;
+      }
+
+      .news-item .date {
+        font-size: 12px;
+      }
+
+      .news-item .content {
+        font-size: 14px;
+      }
+
+      footer {
+        padding: 10px;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+    }    nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #00a2ff;
+}
+
+#services {
+  padding: 50px;
+  text-align: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  margin: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: flex-start;
+  }
+  .card {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="файл.html">Бренды</a></li>
+            <li class="dropdown">
+                <a href="#">Услуги</a>
+                <div class="dropdown-content">
+                  <a href="service.html">Новости</a>
+                  <a href="onas.html">Общая информация</a>
+            
+            <li class="dropdown">
+              <a href="#">О нас</a>
+              <div class="dropdown-content">
+                <a href="новости.html">Новости</a>
+                <a href="onas.html">Общая информация</a>
+        </ul>
+    </nav>
+</header>
+
+  <div id="news">
+    <div class="news-item">
+      <h3 class="title">Аквалайн запускает новую линейку продукции!</h3>
+      <p class="date">Дата публикации: 26 мая 2023</p>
+      <p class="content">Мы с гордостью представляем нашу новую линейку продукции – "Горные источники". Эта коллекция включает в себя воду, добытую из чистейших горных источников. Благодаря своему уникальному происхождению и натуральной фильтрации, наша вода имеет непревзойденное качество и богатый вкус. Попробуйте новую линейку "Горные источники" и ощутите разницу!Заголовок новости: "Аквалайн расширяет географию доставки!.</p>
+    </div>
+
+    <div class="news-item">
+      <h2 class="title">Аквалайн расширяет географию доставки!</h2>
+      <p class="date">Дата публикации: 24 мая 2023</p>
+      <p class="content">Мы рады объявить, что мы расширяем географию нашей доставки! Теперь наши клиенты во многих городах и регионах могут наслаждаться свежей и качественной водой Аквалайн. Мы постоянно работаем над улучшением нашей службы доставки, чтобы обеспечить максимальное удобство для наших клиентов. Закажите доставку прямо сейчас и насладитесь вкусом настоящей горной воды у себя дома!</p>
+    </div>
+
+    <div class="news-item">
+      <h2 class="title">Аквалайн получил награду за качество продукции</h2>
+      <p class="date">Дата публикации: 20 мая 2023</p>
+      <p class="content"> Мы с гордостью объявляем, что компания Аквалайн была удостоена престижной награды за качество нашей продукции. Наша постоянная преданность высоким стандартам и строгому контролю качества позволили нам достичь этого признания. Мы благодарим наших клиентов за поддержку и доверие, которые вдохновляют нас на дальнейшее совершенствование. Продолжайте наслаждаться натуральной и свежей водой от Аквалайн!</p>
+    </div>
+    <div class="news-item">
+        <h2 class="title">Аквалайн вносит вклад в экологическую ответственность</h2>
+        <p class="date">Дата публикации: 20 мая 2023</p>
+        <p class="content">Мы признаем нашу ответственность перед окружающей средой и продолжаем предпринимать шаги в направлении экологической устойчивости. В рамках нашей программы "Зеленая инициатива" мы внедряем инновационные технологии для уменьшения негативного влияния на окружающую среду. Мы также активно сотрудничаем с организациями, занимающимися охраной природы. Вместе мы делаем маленькие, но важные шаги к более зеленому будущему. Будьте с нами в этом пути!</p>
+      </div>
+      <div class="news-item">
+        <h2 class="title">Аквалайн запускает новую линейку эксклюзивных водных продуктов</h2>
+        <p class="date">Дата публикации: 20 мая 2023</p>
+        <p class="content">Мы с радостью анонсируем запуск нашей новой линейки эксклюзивных водных продуктов под названием "AquaLux". Эта коллекция представляет собой уникальное сочетание натуральной воды высочайшего качества с неповторимыми ароматами и добавками, созданными для удовлетворения самых изысканных вкусовых предпочтений. AquaLux станет истинным украшением вашего стола и идеальным выбором для особых мероприятий. Погрузитесь в мир роскоши и качества с нашей новой линейкой AquaLux.</p>
+      </div>
+  </div>
+
+  <footer>
+    
+    <div class="site-map">
+      <h3>Карта сайта</h3>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="файл.html">Бренды</a></li>
+        <li>
+          Услуги
+          <ul>
+            <li><a href="service.html">Услуги</a></li>
+            <li><a href="onas.html">Общая информация</a></li>
+          </ul>
+        </li>
+        <li>
+          О нас
+          <ul>
+            <li><a href="новости.html">Новости</a></li>
+            <li><a href="onas.html">Общая информация</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+     
+  </footer>
+</body>
+</html>
