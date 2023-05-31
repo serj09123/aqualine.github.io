@@ -230,29 +230,77 @@ nav ul li a:hover {
   .card {
     width: 100%;
   }
+}.btn-up { 
+  /* фиксированное позиционирование */ 
+  position: fixed; 
+  /* цвет фона */ 
+  background-color: #673ab7; 
+  /* расстояние от правого края окна браузера */ 
+  right: 20px; 
+  /* расстояние от нижнего края окна браузера */ 
+  bottom: 0; 
+  /* скругление верхнего левого угла */ 
+  border-top-left-radius: 8px; 
+  /* скругление верхнего правого угла */ 
+  border-top-right-radius: 8px; 
+  /* вид курсора */ 
+  cursor: pointer; 
+  /* отображение элемента как flex */ 
+  display: flex; 
+  /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */ 
+  align-items: center; 
+  /* выравниваем элементы внутри элемента по центру вдоль главной оси */ 
+  justify-content: center; 
+  /* ширина элемента */ 
+  width: 60px; 
+  /* высота элемента */ 
+  height: 50px; 
+} 
+ 
+.btn-up::before { 
+  content: ""; 
+  width: 40px; 
+  height: 40px; 
+  background: transparent no-repeat center center; 
+  background-size: 100% 100%; 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E"); 
+} 
+ 
+.btn-up_hide { 
+  display: none; 
+} 
+ 
+@media (hover: hover) and (pointer: fine) { 
+  .btn-up:hover { 
+    background-color: #3360c9; /* цвет заднего фона при наведении */ 
+  } 
 }
+
+
   </style>
 </head>
 <body>
+  <div class="container"></div>
+  <div class="btn-up btn-up_hide"></div>
   <header>
     <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="файл.html">Бренды</a></li>
-            <li class="dropdown">
-                <a href="#">Услуги</a>
-                <div class="dropdown-content">
-                  <a href="service.html">Новости</a>
-                  <a href="onas.html">Общая информация</a>
-            
-            <li class="dropdown">
-              <a href="#">О нас</a>
-              <div class="dropdown-content">
-                <a href="новости.html">Новости</a>
-                <a href="onas.html">Общая информация</a>
-        </ul>
-    </nav>
-</header>
+      <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="файл.html">Бренды</a></li>
+          <li class="dropdown">
+            <a href="#">Услуги</a>
+            <div class="dropdown-content">
+              <a href="service.html">Виды слуги</a>
+              <a href=https://docs.google.com/forms/d/e/1FAIpQLScVEfXdiSWBztRZ5U-mkQK17hIojxZMdlgJuNGyr8INm8yeWw/viewform?usp=sf_link>Доставка</a>
+          
+          <li class="dropdown">
+            <a href="#">О нас</a>
+            <div class="dropdown-content">
+              <a href="новости.html">Новости</a>
+              <a href="onas.html">Общая информация</a>
+      </ul>
+  </nav>
+  </header>
 
   <div id="news">
     <div class="news-item">
@@ -262,28 +310,28 @@ nav ul li a:hover {
     </div>
 
     <div class="news-item">
-      <h2 class="title">Аквалайн расширяет географию доставки!</h2>
+      <h3 class="title">Аквалайн расширяет географию доставки!</h3>
       <p class="date">Дата публикации: 24 мая 2023</p>
       <p class="content">Мы рады объявить, что мы расширяем географию нашей доставки! Теперь наши клиенты во многих городах и регионах могут наслаждаться свежей и качественной водой Аквалайн. Мы постоянно работаем над улучшением нашей службы доставки, чтобы обеспечить максимальное удобство для наших клиентов. Закажите доставку прямо сейчас и насладитесь вкусом настоящей горной воды у себя дома!</p>
     </div>
 
     <div class="news-item">
-      <h2 class="title">Аквалайн получил награду за качество продукции</h2>
+      <h3 class="title">Аквалайн получил награду за качество продукции</h3>
       <p class="date">Дата публикации: 20 мая 2023</p>
       <p class="content"> Мы с гордостью объявляем, что компания Аквалайн была удостоена престижной награды за качество нашей продукции. Наша постоянная преданность высоким стандартам и строгому контролю качества позволили нам достичь этого признания. Мы благодарим наших клиентов за поддержку и доверие, которые вдохновляют нас на дальнейшее совершенствование. Продолжайте наслаждаться натуральной и свежей водой от Аквалайн!</p>
     </div>
     <div class="news-item">
-        <h2 class="title">Аквалайн вносит вклад в экологическую ответственность</h2>
+        <h3 class="title">Аквалайн вносит вклад в экологическую ответственность</h3>
         <p class="date">Дата публикации: 20 мая 2023</p>
         <p class="content">Мы признаем нашу ответственность перед окружающей средой и продолжаем предпринимать шаги в направлении экологической устойчивости. В рамках нашей программы "Зеленая инициатива" мы внедряем инновационные технологии для уменьшения негативного влияния на окружающую среду. Мы также активно сотрудничаем с организациями, занимающимися охраной природы. Вместе мы делаем маленькие, но важные шаги к более зеленому будущему. Будьте с нами в этом пути!</p>
       </div>
       <div class="news-item">
-        <h2 class="title">Аквалайн запускает новую линейку эксклюзивных водных продуктов</h2>
+        <h3 class="title">Аквалайн запускает новую линейку эксклюзивных водных продуктов</h3>
         <p class="date">Дата публикации: 20 мая 2023</p>
         <p class="content">Мы с радостью анонсируем запуск нашей новой линейки эксклюзивных водных продуктов под названием "AquaLux". Эта коллекция представляет собой уникальное сочетание натуральной воды высочайшего качества с неповторимыми ароматами и добавками, созданными для удовлетворения самых изысканных вкусовых предпочтений. AquaLux станет истинным украшением вашего стола и идеальным выбором для особых мероприятий. Погрузитесь в мир роскоши и качества с нашей новой линейкой AquaLux.</p>
       </div>
   </div>
-
+  
   <footer>
     
     <div class="site-map">
@@ -294,8 +342,8 @@ nav ul li a:hover {
         <li>
           Услуги
           <ul>
-            <li><a href="service.html">Услуги</a></li>
-            <li><a href="onas.html">Общая информация</a></li>
+            <li><a href="service.html">Виды услуги</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScVEfXdiSWBztRZ5U-mkQK17hIojxZMdlgJuNGyr8INm8yeWw/viewform?usp=sf_link">Доставка</a></li>
           </ul>
         </li>
         <li>
@@ -307,7 +355,27 @@ nav ul li a:hover {
         </li>
       </ul>
     </div>
-     
+    <div class="btn-up btn-up_hide"></div>
+
   </footer>
+  
+  <script>
+    window.addEventListener('scroll', function() {
+      var button = document.querySelector('.btn-up');
+      if (window.scrollY > 300) {
+        button.classList.remove('btn-up_hide');
+      } else {
+        button.classList.add('btn-up_hide');
+      }
+    });
+  
+    document.querySelector('.btn-up').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  
 </body>
 </html>
