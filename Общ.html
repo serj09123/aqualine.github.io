@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Аквалайн</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <style>
+
+    nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #00a2ff;
+}
+
+#services {
+  padding: 50px;
+  text-align: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  margin: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: flex-start;
+  }
+  .card {
+    width: 100%;
+  }
+}
+#top {
+      width: 100%;
+      
+      background-image: url(https://mobimg.b-cdn.net/v3/fetch/8e/8e63962bddf5ff9cbf981047f2ac0579.jpeg?w=1470&r=0.5625);
+      background-blend-mode: multiply;
+      background-color: rgb(44, 155, 225);
+      background-size: cover;
+      text-align: center;
+      color: #fff;
+      font-size: 3em;
+  }
+.dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 100%; /* Изменили свойство bottom на top */
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.2); /* Заменили положительное значение на отрицательное */
+  z-index: 1;
+  top: 100%; /* Добавили это свойство, чтобы меню открывалось вниз */
+}
+.banner {
+    position: fixed; /* Позиционирование фиксированное */
+    top: 50%; /* Расположение сверху по центру */
+    right: 20px; /* Расположение справа со смещением 20 пикселей */
+    transform: translateY(-50%); /* Выравнивание по вертикали */
+  }
+  
+  .banner img {
+    width: 200px; /* Ширина баннера */
+    height: 610px; /* Высота автоматическая для сохранения пропорций */
+  }
+  
+  .btn-up { 
+  /* фиксированное позиционирование */ 
+  position: fixed; 
+  /* цвет фона */ 
+  background-color: #673ab7; 
+  /* расстояние от правого края окна браузера */ 
+  right: 20px; 
+  /* расстояние от нижнего края окна браузера */ 
+  bottom: 0; 
+  /* скругление верхнего левого угла */ 
+  border-top-left-radius: 8px; 
+  /* скругление верхнего правого угла */ 
+  border-top-right-radius: 8px; 
+  /* вид курсора */ 
+  cursor: pointer; 
+  /* отображение элемента как flex */ 
+  display: flex; 
+  /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */ 
+  align-items: center; 
+  /* выравниваем элементы внутри элемента по центру вдоль главной оси */ 
+  justify-content: center; 
+  /* ширина элемента */ 
+  width: 60px; 
+  /* высота элемента */ 
+  height: 50px; 
+} 
+ 
+.btn-up::before { 
+  content: ""; 
+  width: 40px; 
+  height: 40px; 
+  background: transparent no-repeat center center; 
+  background-size: 100% 100%; 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E"); 
+} 
+ 
+.btn-up_hide { 
+  display: none; 
+} 
+ 
+@media (hover: hover) and (pointer: fine) { 
+  .btn-up:hover { 
+    background-color: #3360c9; /* цвет заднего фона при наведении */ 
+  } 
+}
+h3 {
+  color: black;
+ 
+}
+
+
+
+    
+  </style>
+    <header>
+      <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="файл.html">Бренды</a></li>
+            <li class="dropdown">
+              <a href="#">Услуги</a>
+              <div class="dropdown-content">
+                <a href="service.html">Виды слуги</a>
+                <a href=https://docs.google.com/forms/d/e/1FAIpQLScVEfXdiSWBztRZ5U-mkQK17hIojxZMdlgJuNGyr8INm8yeWw/viewform?usp=sf_link>Доставка</a>
+            
+            <li class="dropdown">
+              <a href="#">О нас</a>
+              <div class="dropdown-content">
+                <a href="новости.html">Новости</a>
+                <a href="onas.html">Общая информация</a>
+                <a href="Общ.html">Контактная информация</a>
+        </ul>
+    </nav>
+    </header>
+    <div id="top">
+      <h1>Контактная информация</h1>
+    </div>
+    <div id="main">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4ba1b56488ece06f84c1ceac21bc17fd48aee26a5c2c02795f01aae28ed8b77d&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+      <div class="text">
+        
+        <h3>
+          Телефон: +7 999-340-25-81<br>
+          Email: bratov2018@list.ru<br>
+           Адрес: ЧЕРКЕССК
+Офис и производственный комплекс
+
+369000, Российская Федерация, Карачаево-Черкесская республика, г. Черкесск, ул. 1-ая Подгорная, д. 45 
+        </h3>
+      </div>
+    </div>
+    <div class="btn-up btn-up_hide"></div>
+    <footer>
+      <div class="site-map">
+        <h3>Карта сайта</h3>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="файл.html">Бренды</a></li>
+          <li>
+            Услуги
+            <ul>
+              <li><a href="service.html">Виды услуг</a></li>
+              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScVEfXdiSWBztRZ5U-mkQK17hIojxZMdlgJuNGyr8INm8yeWw/viewform?usp=sf_link">Доставка</a></li>
+            </ul>
+          </li>
+          <li>
+            О нас
+            <ul>
+              <li><a href="новости.html">Новости</a></li>
+              <li><a href="onas.html">Общая информация</a></li>
+              <li><a href="Общ.html">Контактные данные</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  <script> 
+    const btnUp = { 
+      el: document.querySelector('.btn-up'), 
+      show() { 
+        // удалим у кнопки класс btn-up_hide 
+        this.el.classList.remove('btn-up_hide'); 
+      }, 
+      hide() { 
+        // добавим к кнопке класс btn-up_hide 
+        this.el.classList.add('btn-up_hide'); 
+      }, 
+      addEventListener() { 
+        // при прокрутке содержимого страницы 
+        window.addEventListener('scroll', () => { 
+          // определяем величину прокрутки 
+          const scrollY = window.scrollY || document.documentElement.scrollTop; 
+          // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем 
+          scrollY > 400 ? this.show() : this.hide(); 
+        }); 
+        // при нажатии на кнопку .btn-up 
+        document.querySelector('.btn-up').onclick = () => { 
+          // переместим в начало страницы 
+          window.scrollTo({ 
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth' 
+          }); 
+        } 
+      } 
+    } 
+    btnUp.addEventListener(); 
+  </script>
+</body>
+</html>
